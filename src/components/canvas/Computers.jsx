@@ -9,8 +9,8 @@ const Computers = ({isMoblile}) => {
   const computer = useGLTF('./desktop_pc/scene.gltf');
   return (
     <group>
-      <hemisphereLight intensity={0.75} groundColor='black'/>
-      <pointLight intensity={8}/>
+      <hemisphereLight intensity={0.25} groundColor='black'/>
+      <pointLight intensity={2}/>
       <spotLight position={[-20,50,10]} intensity={100} angle={0.12} penumbra={1} castShadow shadow-mapSize={1024}/> 
       <primitive object={computer.scene} scale={ isMoblile ? 0.65 : 0.75} position={isMoblile ? [0,-3,-2.2] :[0,-3.55,-1.5]} rotation={[-0.01,-0.2,-0.1]} />
     </group>
